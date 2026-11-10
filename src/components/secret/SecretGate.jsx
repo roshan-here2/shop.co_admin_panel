@@ -27,58 +27,75 @@ export default function SecretGate({ onUnlock }) {
 
   return (
     <div className="secret-gate">
-      <div className="login-wrapper">
+      <div className="admin-login-card">
 
-        <div className="login-brand">
-          <div className="brand-content">
-            <div className="brand-logo">SHOP<span>.CO</span></div>
-            <div className="brand-line"></div>
-            <h2>CONTROL YOUR<br />STORE WITH EASE.</h2>
-            <p>Welcome to your store management dashboard.</p>
-            <div className="brand-footer">SHOP.CO ADMINISTRATION</div>
+        <div className="login-illustration">
+          <div className="illustration-circle circle-one"></div>
+          <div className="illustration-circle circle-two"></div>
+
+          <div className="illustration-content">
+            <div className="illustration-logo">SHOP.CO</div>
+            <div className="illustration-icon">✦</div>
+            <h2>Welcome<br />Administrator!</h2>
+            <p>Manage your store, products and orders from one place.</p>
+            <div className="illustration-dots">● ● ●</div>
           </div>
         </div>
 
-        <div className="login-panel">
+        <div className="login-form-area">
           <form className="secret-form" onSubmit={handleSubmit}>
-            <div className="mobile-logo">SHOP<span>.CO</span></div>
+            <div className="form-top-label">SHOP.CO ADMIN PANEL</div>
 
-            <div className="login-heading">
-              <span className="login-tag">SECURE ACCESS</span>
-              <h1>Admin Login</h1>
-              <p>Enter your credentials to continue.</p>
+            <h1>Admin Login</h1>
+            <p className="form-description">
+              Please enter your details to access your dashboard.
+            </p>
+
+            <label>ADMIN</label>
+            <div className="login-input-box">
+              <span>♙</span>
+              <input
+                type="text"
+                value="admin"
+                readOnly
+                aria-label="Admin username"
+              />
             </div>
 
-            <div className="field-group">
-              <label>USERNAME</label>
-              <div className="username-box">
-                <span className="user-icon">@</span>
-                <span>admin</span>
-                <span className="verified">✓</span>
-              </div>
+            <label>EMAIL / USER ID</label>
+            <div className="login-input-box">
+              <span>@</span>
+              <input
+                type="text"
+                value="@admin"
+                readOnly
+                aria-label="Admin user ID"
+              />
             </div>
 
-            <div className="field-group">
-              <label>SECRET PASSWORD</label>
+            <label>SECRET PASSWORD</label>
+            <div className="login-input-box">
+              <span>♙</span>
               <input
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                placeholder="Enter your secret password"
-                autoFocus
+                placeholder="Enter secret password"
                 required
+                autoComplete="current-password"
               />
             </div>
 
             {error && <div className="secret-error">{error}</div>}
 
             <button type="submit" disabled={loading}>
-              {loading ? 'VERIFYING...' : 'ACCESS DASHBOARD'}
+              {loading ? 'Signing in...' : 'LOGIN TO DASHBOARD'}
               <span>→</span>
             </button>
 
-            <div className="login-security">
-              <span>●</span> Secure administrator access
+            <div className="form-bottom">
+              <span className="secure-dot"></span>
+              Secure Admin Authentication
             </div>
           </form>
         </div>
