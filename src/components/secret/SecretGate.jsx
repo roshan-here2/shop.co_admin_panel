@@ -27,7 +27,9 @@ export default function SecretGate({ onUnlock }) {
     <div className="secret-gate">
       <form className="secret-form" onSubmit={handleSubmit}>
         <h1>Enter Secret Password</h1>
-        <p>Admin Dashboard Access</p>
+        <div className="admin-subtitle">
+          Admin Dashboard Access
+        </div>
         {error && <div className="secret-error">{error}</div>}
         <input
           type="password"
