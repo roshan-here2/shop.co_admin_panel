@@ -49,7 +49,7 @@ export default function SideBar() {
         <div className="ds-logo">
           <div className="ds-logo-mark" />
           <div className="ds-logo-text">
-            Dash<span className="accent">Stack</span>
+          <span className="accent">BERRY</span>
           </div>
         </div>
 
