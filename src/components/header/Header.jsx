@@ -31,7 +31,7 @@ export default function Header() {
         </button>
 
         <div className="ds-profile">
-          <img src="https://i.pinimg.com/736x/e3/70/f7/e370f7451f1b9dd00ac1f0e46418b1a6.jpg" alt="Admin" />
+          <img src="https://img.magnific.com/free-vector/bird-colorful-gradient-design-vector_343694-2506.jpg?semt=ais_hybrid&w=740&q=80" alt="Admin" />
           <div className="ds-profile-text">
             <div className="ds-profile-name">Admin</div>
             <div className="ds-profile-role">Administrator</div>
