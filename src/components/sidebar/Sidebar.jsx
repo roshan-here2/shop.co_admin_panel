@@ -47,7 +47,6 @@ export default function SideBar() {
         </button>
 
         <div className="ds-logo">
-          {/* <div className="ds-logo-mark" /> */}
           <div className="ds-logo-text">
           <span className="accent">BERRY</span>
           </div>
